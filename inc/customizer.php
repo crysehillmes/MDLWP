@@ -217,6 +217,44 @@ function mdlwp_customize_register( $wp_customize ) {
 			)
 		)
 	);
+
+	$wp_customize->add_section( 'mdlwp_content_section' , array(
+    	'title'      => __( 'Content', 'mdlwp' ),
+    	'priority'   => 30,
+	));
+
+    $wp_customize->add_setting( 'show_author_meta_in_post_list', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_author_meta_in_post_list', array(
+        'label'    => __( 'Show author meta in post list', 'mdlwp' ),
+        'section'  => 'mdlwp_content_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_author_meta_in_search_list', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_author_meta_in_search_list', array(
+        'label'    => __( 'Show author meta in search list', 'mdlwp' ),
+        'section'  => 'mdlwp_content_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_read_more_button', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_read_more_button', array(
+        'label'    => __( 'Show read more button', 'mdlwp' ),
+        'section'  => 'mdlwp_content_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
 }
 
 add_action( 'customize_register', 'mdlwp_customize_register' );

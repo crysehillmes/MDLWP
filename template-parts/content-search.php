@@ -39,6 +39,8 @@
 		$featured_img = $featured_img_from_meta;
 	}
   	$bg = (!empty( $featured_img ) ? "background-image: url('". $featured_img ."');" : '');
+
+	$showAuthorMetaInSearchList = get_theme_mod( 'show_author_meta_in_search_list' );
 ?>
 
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp"> 
@@ -61,20 +63,21 @@
 		<div class="entry-summary mdl-color-text--grey-600 mdl-card__supporting-text">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
+		<?php if ( $showAuthorMetaInSearchList == 1) { ?>
+			<footer class="entry-footer meta mdl-card__actions mdl-card--border">
 
-		<footer class="entry-footer meta mdl-card__actions mdl-card--border">
-
-			<div class="avatar-img">
-				<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
-			</div>
-	        
-	        <?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php mdlwp_posted_on(); ?>
-			</div><!-- .entry-meta -->
-			<?php endif; ?>
-	              
-		</footer><!-- .entry-footer -->
+				<div class="avatar-img">
+					<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+				</div>
+				
+				<?php if ( 'post' == get_post_type() ) : ?>
+				<div class="entry-meta">
+					<?php mdlwp_posted_on(); ?>
+				</div><!-- .entry-meta -->
+				<?php endif; ?>
+					
+			</footer><!-- .entry-footer -->
+		<?php } ?>
 	</article><!-- #post-## -->
 </div> <!-- .mdl-cell -->
 

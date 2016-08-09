@@ -77,6 +77,11 @@ endif;
  */
 
 function modify_read_more_link() {
-	return '<br><br><a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" href="' . get_permalink() . '">'. __( 'Read More', 'mdlwp' ). '</a>';
+	$showReadMoreButton = get_theme_mod( 'show_read_more_button' );
+	if($showReadMoreButton == 1) {
+		return '<br><br><a class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect read-more-button" href="' . get_permalink() . '">'. __( 'Read More', 'mdlwp' ). '</a>';
+	} else {
+		return '';
+	}
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
