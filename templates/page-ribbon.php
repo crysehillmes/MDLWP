@@ -24,7 +24,9 @@ get_header(); ?>
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
+						echo '<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp comments-card">';
 						comments_template();
+						echo '</div>';
 					endif;
 				?>
 

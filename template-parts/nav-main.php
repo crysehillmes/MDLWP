@@ -11,7 +11,7 @@
 
 <div class="mdl-layout__header-row">
   <!-- Title -->
-  <span class="mdl-layout-title"><?php bloginfo( 'name' ); ?></span>
+  <span class="mdl-layout-title" onclick="location.href='<?php bloginfo( 'wpurl' ); ?>'"><?php bloginfo( 'name' ); ?></span>
   <!-- Add spacer, to align navigation to the right -->
   <div class="mdl-layout-spacer"></div>
 

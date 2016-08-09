@@ -141,6 +141,15 @@ function mdlwp_widgets_init() {
 add_action( 'widgets_init', 'mdlwp_widgets_init' );
 
 /**
+ * Remove ver=x.x.x from css and js url.
+ */
+function mdlwp_css_js_ver_remover($src, $handle) {
+	return remove_query_arg(array('ver'), $src);		
+}
+add_filter('script_loader_src',	'mdlwp_css_js_ver_remover',10,2);
+add_filter('style_loader_src',	'mdlwp_css_js_ver_remover',10,2);
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

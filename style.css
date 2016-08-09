@@ -43,7 +43,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   font-size: 16px;
   font-size: 1rem; }
 
@@ -138,11 +138,13 @@ textarea {
 ## Posts and pages
 --------------------------------------------------------------*/
 .site-main {
-  padding-top: 40px;
+  padding-top: 8px;
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
   .site-main .mdl-card {
-    margin-bottom: 35px; }
+    margin-bottom: 8px; }
+    .site-main .mdl-card .mdl-card__title {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .site-main header h3 {
     margin: 0;
     color: #fff; }
@@ -169,6 +171,8 @@ textarea {
             align-items: flex-end;
     cursor: pointer;
     height: 280px; }
+  .site-main .mdl-card__supporting-text {
+    width: auto; }
   .site-main .meta {
     box-sizing: border-box;
     padding: 16px;
@@ -208,6 +212,11 @@ textarea {
 .single-post .entry-content p {
   font-size: 16px;
   line-height: 28px; }
+  .single-post .entry-content p img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%; }
 
 .single .mdl-card__media,
 .page .mdl-card__media {
@@ -218,6 +227,9 @@ textarea {
 --------------------------------------------------------------*/
 .comments {
   background-color: #EEE; }
+
+.comments-card {
+  padding: 16px; }
 
 .comment-content a {
   word-wrap: break-word; }

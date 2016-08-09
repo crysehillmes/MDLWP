@@ -18,10 +18,19 @@
     // Checks and returns the height value
   	$height = (!empty( $height_value ) ? 'height:' . $height_value . ';' : '');
 
-  	 // Gets the uploaded featured image
-  	$featured_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+  	// Gets the uploaded featured image
+  	// $featured_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+	$featured_img_from_local = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+	$featured_img_from_meta = get_post_meta($post->ID, 'external-featured-img', true);
+
   	// Checks and returns the featured image
-  	$bg = (!empty( $featured_img ) ? "background-image: url('". $featured_img[0] ."');" : '');
+  	// $bg = (!empty( $featured_img ) ? "background-image: url('". $featured_img[0] ."');" : '');
+	if(!empty($featured_img_from_local)) {
+		$featured_img = $featured_img_from_local[0];
+	} elseif(!empty($featured_img_from_meta)) {
+		$featured_img = $featured_img_from_meta;
+	}
+  	$bg = (!empty( $featured_img ) ? "background-image: url('". $featured_img ."');" : '');
 ?>
 
 <div class="ribbon" style="<?php echo $color . $bg . $height; ?> "></div>

@@ -1,10 +1,14 @@
 .site-main {
-	padding-top: 40px;
+	padding-top: 8px;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 
 	.mdl-card {
-		margin-bottom: 35px;
+		margin-bottom: 8px;
+
+		.mdl-card__title {
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
 	}
 
 	header h3 {
@@ -32,6 +36,10 @@
 		align-items: flex-end;
 		cursor: pointer;
 		height: 280px;
+	}
+
+	.mdl-card__supporting-text {
+		width: auto;
 	}
 
 	.meta {
@@ -71,6 +79,13 @@
 	.entry-content p{	
 		font-size: 16px;
 		line-height: 28px;
+
+		img {
+			width: auto;
+			height : auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
 	}
 }
 
