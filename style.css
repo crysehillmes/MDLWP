@@ -41,7 +41,8 @@ body,
 button,
 input,
 select,
-textarea {
+textarea,
+h1, h2, h3, h4, h5, h6 {
   color: #404040;
   font-family: 'Roboto', 'Helvetica', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   font-size: 16px;
@@ -217,6 +218,30 @@ textarea {
     height: auto;
     max-height: 100%;
     max-width: 100%; }
+
+.single-post .entry-content h1 {
+  font-size: 36px;
+  line-height: 44px; }
+
+.single-post .entry-content h2 {
+  font-size: 32px;
+  line-height: 40px; }
+
+.single-post .entry-content h3 {
+  font-size: 28px;
+  line-height: 36px; }
+
+.single-post .entry-content h4 {
+  font-size: 24px;
+  line-height: 32px; }
+
+.single-post .entry-content h5 {
+  font-size: 20px;
+  line-height: 28px; }
+
+.single-post .entry-content h6 {
+  font-size: 16px;
+  line-height: 24px; }
 
 .single .mdl-card__media,
 .page .mdl-card__media {

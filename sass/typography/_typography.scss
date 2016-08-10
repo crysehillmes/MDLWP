@@ -2,7 +2,8 @@ body,
 button,
 input,
 select,
-textarea {
+textarea,
+h1, h2, h3, h4, h5, h6 {
 	color: $color__text-main;
 	font-family: 'Roboto', 'Helvetica', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
 	@include font-size(1);
