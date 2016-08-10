@@ -54,9 +54,19 @@ if(isset($_POST['submitted'])) {
 
 get_header(); ?>
 
+	<?php
+		$showSideBar = get_theme_mod( 'show_side_bar_on_page_contact' );
+		$content_part_col = ' mdl-cell--12-col-tablet mdl-cell--12-col-phone';
+		if($showSideBar == 1) {
+			$content_part_col = ' mdl-cell--9-col'.$content_part_col;
+		} else {
+			$content_part_col = ' mdl-cell--12-col'.$content_part_col;
+		}
+		$content_part_col = 'mdl-cell'.$content_part_col;
+	?>
 	
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="content-area mdl-grid">
+		<main id="main" class="site-main <?php echo $content_part_col ?>" role="main">
 
 			<?php do_action( 'mdlwp_before_content' ); ?>
 
@@ -185,6 +195,11 @@ get_header(); ?>
 			<?php do_action( 'mdlwp_after_content' ); ?>
 
 		</main><!-- #main -->
+		<?php if($showSideBar && is_active_sidebar( 'sidebar-page-contact' )) { ?>
+		<main id="main" class="sidebar mdl-grid mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone"> 
+			<?php dynamic_sidebar( 'sidebar-page-contact' ); ?>
+		</main><!-- #main -->
+		<?php } ?>
 	</div><!-- #primary -->
 	
 

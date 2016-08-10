@@ -120,6 +120,31 @@ function mdlwp_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'mdlwp_post_meta' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function mdlwp_post_meta() {
+	$posted_on = '<span>作者: <a href="'.esc_url(get_author_posts_url(get_the_author_meta('ID'))).'">'.esc_html(get_the_author()).'</a> | </span>';
+
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	}
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
+	);
+
+	$posted_on = $posted_on.'<span>时间: '.$time_string.'</span>';
+ 
+	echo $posted_on; // WPCS: XSS OK.
+}
+endif;
+
 if ( ! function_exists( 'mdlwp_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.

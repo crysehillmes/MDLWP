@@ -57,6 +57,13 @@
 				</header>
 			</div>
 		<?php endif; ?>
+		<?php if ( 'post' == get_post_type() ) : ?>
+			<div class="meta-single-row">
+				<div class="entry-meta flat-meta">
+					<?php mdlwp_post_meta(); ?>
+				</div><!-- .entry-meta -->
+			</div>
+		<?php endif; ?>
 
 		<div class="entry-content mdl-color-text--black mdl-card__supporting-text">
 			<?php
@@ -83,7 +90,7 @@
 				
 				<?php if ( 'post' == get_post_type() ) : ?>
 				<div class="entry-meta">
-					<?php mdlwp_posted_on(); ?>
+					<?php mdlwp_post_meta(); ?>
 				</div><!-- .entry-meta -->
 				<?php endif; ?>
 					

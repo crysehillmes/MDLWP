@@ -255,6 +255,101 @@ function mdlwp_customize_register( $wp_customize ) {
         'type'     => 'checkbox',
         'priority' => 2
     ));
+
+	
+	$wp_customize->add_section( 'mdlwp_sidebar_section' , array(
+    	'title'      => __( 'SideBar Visibility', 'mdlwp' ),
+    	'priority'   => 30,
+	));
+
+    $wp_customize->add_setting( 'show_side_bar_on_404', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_side_bar_on_404', array(
+        'label'    => __( 'Show SideBar on 404', 'mdlwp' ),
+        'section'  => 'mdlwp_sidebar_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_side_bar_on_archive', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_side_bar_on_archive', array(
+        'label'    => __( 'Show SideBar on Archive', 'mdlwp' ),
+        'section'  => 'mdlwp_sidebar_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_side_bar_on_index', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_side_bar_on_index', array(
+        'label'    => __( 'Show SideBar on Index', 'mdlwp' ),
+        'section'  => 'mdlwp_sidebar_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_side_bar_on_page', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_side_bar_on_page', array(
+        'label'    => __( 'Show SideBar on Page', 'mdlwp' ),
+        'section'  => 'mdlwp_sidebar_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_side_bar_on_search', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_side_bar_on_search', array(
+        'label'    => __( 'Show SideBar on Search', 'mdlwp' ),
+        'section'  => 'mdlwp_sidebar_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_side_bar_on_single', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_side_bar_on_single', array(
+        'label'    => __( 'Show SideBar on Single', 'mdlwp' ),
+        'section'  => 'mdlwp_sidebar_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_side_bar_on_page_contact', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_side_bar_on_page_contact', array(
+        'label'    => __( 'Show SideBar on Page Contact', 'mdlwp' ),
+        'section'  => 'mdlwp_sidebar_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+
+    $wp_customize->add_setting( 'show_side_bar_on_page_ribbon', array(
+        'default' => '1',
+    ));
+ 
+    $wp_customize->add_control( 'show_side_bar_on_page_ribbon', array(
+        'label'    => __( 'Show SideBar on Page Ribbon', 'mdlwp' ),
+        'section'  => 'mdlwp_sidebar_section',
+        'type'     => 'checkbox',
+        'priority' => 2
+    ));
+	
 }
 
 add_action( 'customize_register', 'mdlwp_customize_register' );

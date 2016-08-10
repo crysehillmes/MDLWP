@@ -1,7 +1,15 @@
-.site-main {
+.content-area {
 	padding-top: 8px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.site-main {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	padding: 0px;
+	margin: 0px;    
+	margin-left: 8px;
 
 	.mdl-card {
 		margin-bottom: 8px;
@@ -23,6 +31,10 @@
 
 			}
 		}
+	}
+
+	.post .mdl-card__title header h3 {
+		font-size: 28px;
 	}
 
 	.mdl-card__media {
@@ -72,6 +84,42 @@
 		    	line-height: 16px
 		    }
 		}
+
+		.flat-meta {
+			flex-direction: row;
+		}
+	}
+
+	.meta-single-row {
+		box-sizing: border-box;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 16px;
+		padding-bottom: 0px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		height: auto;
+
+		.entry-meta {
+			margin-left: 16;
+		    color: #757575;
+    		font-size: 12px;
+
+		    a {
+		    	text-decoration: none;
+		    }
+
+			span {
+		    	font-size: 12px;
+		    	line-height: 16px;
+			}
+		}
+
+		.flat-meta {
+			flex-direction: row;
+		}
 	}
 }
 
@@ -120,7 +168,15 @@
 
 
 }
-
+.list-page-title-card {
+	padding: 16px;
+	min-height: 0;
+	h1 {
+		font-size: 32px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+}
 .single,
 .page {
 	.mdl-card__media {

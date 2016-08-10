@@ -99,6 +99,86 @@ add_action( 'after_setup_theme', 'mdlwp_content_width', 0 );
  */
 function mdlwp_widgets_init() {
 	register_sidebar( array(
+		'name'          => esc_html__( 'Index SideBar', 'mdlwp' ),
+		'id'            => 'sidebar-index',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( '404 SideBar', 'mdlwp' ),
+		'id'            => 'sidebar-404',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Archive SideBar', 'mdlwp' ),
+		'id'            => 'sidebar-archive',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Search SideBar', 'mdlwp' ),
+		'id'            => 'sidebar-search',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Single SideBar', 'mdlwp' ),
+		'id'            => 'sidebar-single',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Page Contact SideBar', 'mdlwp' ),
+		'id'            => 'sidebar-page-contact',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Page Ribbon SideBar', 'mdlwp' ),
+		'id'            => 'sidebar-page-ribbon',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Page SideBar', 'mdlwp' ),
+		'id'            => 'sidebar-page',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="sidebar-widget mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 1', 'mdlwp' ),
 		'id'            => 'footer-1',
 		'description'   => '',
