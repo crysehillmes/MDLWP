@@ -60,7 +60,7 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="entry-summary mdl-color-text--grey-600 mdl-card__supporting-text">
+		<div class="entry-summary mdl-color-text--black mdl-card__supporting-text">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 		<?php if ( $showAuthorMetaInSearchList == 1) { ?>

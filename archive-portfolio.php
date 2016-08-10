@@ -74,7 +74,7 @@ get_header(); ?>
 							<?php endif; ?>
 						</div>
 
-						<div class="entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+						<div class="entry-content mdl-color-text--black mdl-card__supporting-text">
 							<h2>
 								
 								<a href="<?php the_permalink(); ?>">

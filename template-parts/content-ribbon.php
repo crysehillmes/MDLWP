@@ -45,7 +45,7 @@
 					<?php the_title( sprintf( '<h3>','</h3>' )); ?>
 				</header><!-- .entry-header -->
 
-				<div class="entry-content mdl-color-text--grey-600">
+				<div class="entry-content mdl-color-text--black">
 					<?php the_content(); ?>
 					<?php
 						wp_link_pages( array(

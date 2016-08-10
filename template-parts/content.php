@@ -58,7 +58,7 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+		<div class="entry-content mdl-color-text--black mdl-card__supporting-text">
 			<?php
 				the_content( sprintf(
 					/* translators: %s: Name of current post. */
