@@ -469,6 +469,11 @@ ol.comment-list {
         padding-right: 16px; }
         .sidebar .sidebar-widget ul li a {
           text-decoration: none; }
+    .sidebar .sidebar-widget .tagcloud {
+      margin-left: 16px;
+      margin-right: 16px; }
+      .sidebar .sidebar-widget .tagcloud a {
+        text-decoration: none; }
 
 body {
   background-color: #f5f5f5; }
